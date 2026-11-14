@@ -1,0 +1,32 @@
+{
+  "pipeline_name": "breast_cancer_clinical_etl_pipeline",
+  "status": "SUCCESS",
+  "stages": {
+    "1_extract": {
+      "source_file": "data/raw/breast_cancer_raw_ingest.csv",
+      "rows_extracted": 584,
+      "columns_extracted": 35,
+      "duplicate_rows_detected": 15,
+      "missing_cells_detected": 27
+    },
+    "2_clean_and_validate": {
+      "staging_file": "data/staging/breast_cancer_cleaned_staging.csv",
+      "rows_after_deduplication": 569,
+      "missing_cells_imputed": 27,
+      "outlier_values_iqr_capped": 612,
+      "remaining_nulls": 0
+    },
+    "3_transform_and_engineer": {
+      "engineered_features_added": 5,
+      "encoded_features_added": 4,
+      "standardized_features_added": 35,
+      "final_column_count": 79
+    },
+    "4_load_warehouse": {
+      "sqlite_database": "data/processed/clinical_data_warehouse.db",
+      "fact_table": "fact_breast_cancer_diagnostics",
+      "agg_table": "agg_diagnosis_by_size_grade",
+      "rows_loaded": 569
+    }
+  }
+}

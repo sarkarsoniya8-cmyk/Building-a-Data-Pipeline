@@ -1,0 +1,7 @@
+diagnosis_label,tumor_size_grade,patient_count,avg_mean_radius,avg_worst_radius,avg_area_perimeter_ratio,avg_malformation_score
+Benign,Large,23,15.476,16.888,7.343,0.515
+Benign,Medium,149,13.321,14.666,6.368,0.454
+Benign,Small,185,10.787,11.907,5.153,0.384
+Malignant,Large,167,18.337,22.178,8.488,0.979
+Malignant,Medium,39,13.7,16.497,6.446,1.01
+Malignant,Small,6,11.475,14.152,5.324,1.123
